@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <script src="takeaway_selector.js"></script>
         <title>Welcome To Your Takeaway Generator</title>
     </head>
     <body>
         <div>
             <h1>Takeaway Generator</h1>
             <form>
-               <div>
+               <div id="1">
                 <label>Option 1
-                    <input type="text" id="option-1" value="" />
+                    <input type="text" id="option-1" value="" required />
                 </label>
-                <button type="button" value="add">+</button>
                 <button type="button" value="remove">-</button>
                </div>
+               <button type="button" onclick="add_option()">Add Option</button>
                <button type="submit">Submit</button>
             </form>
             <p>Your chosen takeaway is...</p>
