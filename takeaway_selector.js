@@ -3,25 +3,25 @@ let optionCount = 1;
 function add_option() {
     
     let optionDiv = document.createElement("div");
-    document.getElementById(optionCount).insertAfter(optionDiv);
+    document.getElementById(optionCount).after(optionDiv);
     optionCount++;
-    optionDiv = optionDiv.getAttribute("id", optionCount);
+    optionDiv.setAttribute("id", optionCount);
 
     let optionLabel = document.createElement("label");
-    optionLabel = optionLabel.innerText(`Option ${optionCount}`);
-    document.getElementById(optionDiv).appendChild(optionLabel);
+    optionLabel.innerText = `Option ${optionCount}`;
+    document.getElementById(optionCount).appendChild(optionLabel);
 
 
     let optionInput = document.createElement("input");
-    optionInput = optionInput.setAttribute("type", "text");
-    optionInput = optionInput.setAttribute("id", `option-${optionCount}`);
-    optionInput = optionInput.setAttribute("value", "");
-    document.getElementById(optionDiv).lastChild.appendChild(optionInput);
+    optionInput.setAttribute("type", "text");
+    optionInput.setAttribute("id", `option-${optionCount}`);
+    optionInput.setAttribute("value", "");
+    document.getElementById(optionCount).lastChild.appendChild(optionInput);
 
     let buttonRemove = document.createElement("button");
-    buttonRemove = buttonAdd.setAttribute("type", "button");
-    buttonRemove = buttonAdd.setAttribute("value", "remove");
-    buttonRemove = buttonRemove.innerText("-");
-    document.getElementById(optionDiv).appendChild(buttonRemove);
+    buttonRemove.setAttribute("type", "button");
+    buttonRemove.setAttribute("value", "remove");
+    buttonRemove.innerText = "-";
+    document.getElementById(optionCount).appendChild(buttonRemove);
 
 }
